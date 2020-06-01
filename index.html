@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        button {
+            outline: none;
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: #2C3C54;
+            color: #F4F4FC;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .sort-container {
+            padding: 0 10px;
+            border-radius:3px;
+            margin: 0 10px;
+            border:1px solid black;
+            cursor: pointer;
+        }
+        #sort-label {
+            text-align: center;
+            font-weight: bold;
+        }
+        .center-text {
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Sorting Visualizer</h1>
+    <div class="time-container" style="display: flex;margin-bottom: 10px;">
+        Time(in millis)
+        <select id="mySelect" style="margin-left: 10px;">
+            <option id="defaultOption">10</option>
+            <option>20</option>
+            <option>40</option>
+            <option>80</option>
+            <option>160</option>
+            <option>300</option>
+            <option>500</option>
+            <option>700</option>
+            <option>900</option>
+            <option>1100</option>
+        </select>
+        <div style="display: flex">
+            <label for="numbers" style="text-align:center;margin: 0 10px;font-weight: 500;">Numbers</label><br/>
+            <input id="numbers-slider" type="range" min="3" max="95" value="1">
+            <div id="start-sort" class="sort-container">start sorting</div>            
+        </div>        
+    </div>
+    <div style="display: flex;margin-bottom: 20px;">
+        <button id="bubble-btn">Bubble Sort</button>
+        <button id="quick-btn">Quick Sort</button>
+        <button id="merge-btn">Merge Sort</button>
+        <button id="heap-btn">Heap Sort</button>
+    </div>
+    <div id="sort-label">Bubble Sort</div>
+    <div class="container">
+        <div class="canvas-container">            
+            <canvas id="mycanvas"></canvas>
+        </div>
+    </div>    
+    <!-- <script type="text/javascript" src="sketch2.js"></script> -->
+    <script type="text/javascript" src="Rectangle.js"></script>
+    <script type="text/javascript" src="BubbleSort.js"></script>
+    <script type="text/javascript" src="QuickSort.js"></script>
+    <script type="text/javascript" src="MergeSort.js"></script>
+    <script type="text/javascript" src="HeapSort.js"></script>
+    <script type="text/javascript" src="Main.js"></script>
+</body>
+</html>
